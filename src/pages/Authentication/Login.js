@@ -16,12 +16,13 @@ const Login = () => {
 
 
     const onSubmit = data => {
-        data.password.length < 6 ? alert('chottttto hye geche baba!')
+        data.password.length < 6 ? alert('boro password den!')
             :
             signIn(data.email, data.password)
                 .then(result => {
                     const user = result.user;
                     console.log(user);
+                    
                     // setError('');
                     // if (user.emailVerified) {
                     //     navigate(from, { replace: true });

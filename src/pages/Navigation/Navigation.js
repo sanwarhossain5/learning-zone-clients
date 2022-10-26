@@ -15,9 +15,9 @@ const Navigation = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='p-0'>
             <Container>
-                <Navbar.Brand as={Link} to="/">
-                    <Image src='https://i.ibb.co/QHKZFzQ/image.png' />{' '}
-                    Tutorio
+                <Navbar.Brand as={Link} to="/home">
+                    <Image src='https://www.kindpng.com/imgv/hRJJbii_machine-learning-logo-png-transparent-png/' />{' '}
+                    Learning Zone
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
