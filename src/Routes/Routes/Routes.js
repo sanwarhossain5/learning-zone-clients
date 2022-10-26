@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout/Main";
-import Authentication from "../Pages/Authentication/Authentication";
-import Blog from "../Pages/Blog/Blog";
-import Courses from "../Pages/Courses/Courses";
-import About from "../Pages/Courses/RightSide/About";
-import MyCourses from "../Pages/Courses/RightSide/MyCourses";
-import Payment from "../Pages/Courses/RightSide/Payment";
-import Profile from "../Pages/Courses/RightSide/Profile";
-import Home from "../Pages/Home/Home";
+import Main from "../../Layout/Main";
+import Authentication from "../../pages/Authentication/Authentication";
+import Blog from "../../pages/Blog/Blog";
+import Courses from "../../pages/Courses/Courses";
+import About from "../../pages/Courses/RightSide/About";
+import MyCourses from "../../pages/Courses/RightSide/MyCourses";
+import Payment from "../../pages/Courses/RightSide/Payment";
+import Profile from "../../pages/Courses/RightSide/Profile";
+import Home from "../../pages/Home/Home";
+
 
 export const routes = createBrowserRouter([
     {
