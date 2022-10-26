@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 
@@ -16,24 +17,22 @@ const Login = () => {
 
 
     const onSubmit = data => {
-        data.password.length < 6 ? alert('boro password den!')
+        data.password.length < 6 ? toast.error('chottttto hye geche baba!')
             :
             signIn(data.email, data.password)
-                .then(result => {
-                    const user = result.user;
-                    console.log(user);
-                    
+                .then(res => {
                     // setError('');
-                    // if (user.emailVerified) {
-                    //     navigate(from, { replace: true });
-                    // }
-                    // else {
-                    //     toast.error('Your email is not verified. Please verify your email address.')
-                    // }
+                    if (res.user.email) {
+                        navigate(from, { replace: true });
+                    }
+                    else {
+                        toast.error('Something went wrong.')
+                    }
                 })
                 .catch(error => {
                     // console.error(error)
                     // setError(error.message);
+                    toast.error('Something went wrong.')
                 })
                 .finally(() => {
                     setLoading(false);

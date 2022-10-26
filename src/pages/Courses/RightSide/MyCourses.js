@@ -1,26 +1,35 @@
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const MyCourses = () => {
+    const courses = useLoaderData();
+
+
     return (
-        <Row>
+        <div>
             {
-                [...Array(9)].map(item => <Col md={4}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img className='p-3 rounded-2' variant="top" src="https://i.ibb.co/RpxpBcT/image.png" />
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>)
+                courses.map(item => <Card className="mb-4 shadow">
+                    <Row>
+                        <Col md={4}>
+                            <Card.Img className='p-3 rounded-2' variant="top" src={item.courseThumb} />
+                        </Col>
+                        <Col md={8}>
+                            <Card.Body>
+                                <Card.Title>{item.courseName}</Card.Title>
+                                <Card.Text style={{ textAlign: 'justify' }}>
+                                    {item.description.slice(0, 150)}...
+                                </Card.Text>
+                                <Link to={`/course/${item.id}`}>
+                                    <Button variant="primary">Show Details</Button>
+                                </Link>
+                            </Card.Body>
+                        </Col>
+                    </Row>
+                </Card>)
             }
 
-        </Row>
+        </div>
     );
 };
 

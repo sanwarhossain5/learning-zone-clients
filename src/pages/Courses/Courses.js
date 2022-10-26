@@ -5,7 +5,7 @@ import LeftSide from './LeftSide';
 
 const Courses = () => {
     return (
-        <Container>
+        <Container className="py-4">
             <Row>
                 <Col lg="3">
                     <LeftSide />

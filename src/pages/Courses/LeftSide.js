@@ -1,5 +1,5 @@
 import React from 'react';
-import { BreadcrumbItem, ListGroup } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const LeftSide = () => {
@@ -10,7 +10,7 @@ const LeftSide = () => {
 
 
     return (
-        <ListGroup>
+        <ListGroup className="shadow">
             <ListGroup.Item
                 as={Link}
                 to='/courses'

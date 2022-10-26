@@ -8,9 +8,9 @@ const Authentication = () => {
     const { handleGoogleSignIn, handleGithubSignIn } = useContext(AuthContext)
     const [login, setLogin] = useState(true);
 
-    const handleToggle = (e) => {
-        setLogin(e.target.checked);
-    }
+    // const handleToggle = (e) => {
+    //     setLogin(e.target.checked);
+    // }
 
     return (
         <Container>
@@ -28,9 +28,9 @@ const Authentication = () => {
 
                     <br />
                     <div>
-                        <input size='sm' type="checkbox" onClick={handleToggle} className="btn-check" id="toggleLogin" autocomplete="off" />
-                        <label className="btn btn-primary" htmlFor="toggleLogin">{login ? 'Create an account' : 'Already have an account?'}</label>
-
+                        <Badge bg="primary" onClick={() => setLogin(!login)}>
+                            {login ? 'Create an account' : 'Already have an account?'}
+                        </Badge>
                         {/* social login  */}
                         <br />
                         <br />
