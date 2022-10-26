@@ -1,9 +1,10 @@
 import React from 'react';
+import freePik from '../../assets/learn.jpg'
 
 const Home = () => {
     return (
         <div>
-            this is home
+            <img className='img-fluid' src={freePik} alt="" />
         </div>
     );
 };

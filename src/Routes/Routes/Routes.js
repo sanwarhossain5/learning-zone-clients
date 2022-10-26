@@ -11,6 +11,10 @@ import Home from "../../pages/Home/Home";
 
 
 export const routes = createBrowserRouter([
+  {
+    path: '*',
+    element: <div className="text-center">This Route Not Found</div>
+  },
     {
         path: '/',
         element: <Main></Main>,
@@ -47,6 +51,7 @@ export const routes = createBrowserRouter([
                         path: 'payment',
                         element: <Payment />
                     },
+                 
                 ]
             },
         ]
