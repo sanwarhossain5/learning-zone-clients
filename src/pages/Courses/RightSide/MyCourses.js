@@ -12,11 +12,11 @@ const MyCourses = () => {
                 courses.map(item => <Card className="mb-4 shadow">
                     <Row>
                         <Col md={4}>
-                            <Card.Img className='p-3 rounded-2' variant="top" src={item.courseThumb} />
+                            <Card.Img className='p-3 rounded-2' variant="top" src={item.picture} />
                         </Col>
                         <Col md={8}>
                             <Card.Body>
-                                <Card.Title>{item.courseName}</Card.Title>
+                                <Card.Title>{item.title}</Card.Title>
                                 <Card.Text style={{ textAlign: 'justify' }}>
                                     {item.description.slice(0, 150)}...
                                 </Card.Text>

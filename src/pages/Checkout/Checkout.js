@@ -6,7 +6,7 @@ const Checkout = () => {
     console.log(course)
     return (
         <div>
-            <h1>this is {course.courseName} checkout route</h1>
+            <h1>this is {course.title} checkout route</h1>
         </div>
     );
 };

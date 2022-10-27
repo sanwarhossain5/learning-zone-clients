@@ -10,11 +10,11 @@ const SingleCourse = () => {
             <Card>
                 <Row>
                     <Col md={4}>
-                        <Card.Img className='p-3 rounded-2' variant="top" src={course.courseThumb} />
+                        <Card.Img className='p-3 rounded-2' variant="top" src={course.picture} />
                     </Col>
                     <Col md={8}>
                         <Card.Body>
-                            <Card.Title className='fs-1'>{course.courseName}</Card.Title>
+                            <Card.Title className='fs-1'>{course.title}</Card.Title>
                             <Card.Text style={{ textAlign: 'justify' }}>
                                 {course.description}
                             </Card.Text>

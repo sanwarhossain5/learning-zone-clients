@@ -34,6 +34,10 @@ export const routes = createBrowserRouter([
                 element: <Blog/>,
             },
             {
+                path: '/faq',
+                element: <Blog/>,
+            },
+            {
                 path: '/checkout/:id',
                 loader: async ({ params }) => {
                     return fetch(`https://learning-zone-server.vercel.app/courses/${params.id}`)
