@@ -14,7 +14,7 @@ import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute";
 
 
 //server url
-const url = 'https://learning-zone-server.vercel.app/';
+// const url = 'https://learning-zone-server.vercel.app/';
 
 export const routes = createBrowserRouter([
     {
@@ -36,14 +36,14 @@ export const routes = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 loader: async ({ params }) => {
-                    return fetch(`${url}/courses/${params.id}`)
+                    return fetch(`https://learning-zone-server.vercel.app/courses/${params.id}`)
                 },
                 element: <PrivateRoute><Checkout /></PrivateRoute>,
             },
             {
                 path: '/course/:id',
                 loader: async ({ params }) => {
-                    return fetch(`${url}/courses/${params.id}`)
+                    return fetch(`https://learning-zone-server.vercel.app/courses/${params.id}`)
                 },
                 element: <SingleCourse />,
             },
@@ -55,7 +55,7 @@ export const routes = createBrowserRouter([
                         index: true,
                         element: <MyCourses />,
                         loader: async () => {
-                            return fetch(`${url}/courses`)
+                            return fetch(`https://learning-zone-server.vercel.app/courses`)
                         }
                     },
                     {

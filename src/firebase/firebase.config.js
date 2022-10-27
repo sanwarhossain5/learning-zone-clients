@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCnltHw7On851vc1YNeJ653i1vWEmX8Hdg",
-  authDomain: "learning-zone-40cff.firebaseapp.com",
+  authDomain: process.env.REACT_APP_authDomain,
   projectId: "learning-zone-40cff",
   storageBucket: "learning-zone-40cff.appspot.com",
   messagingSenderId: "1072804980435",
